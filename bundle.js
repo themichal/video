@@ -10975,7 +10975,7 @@ var width = 1280;
 var height = 720;
 
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { video: { width: 1280, height: 720 } };
+var constraints = { video: { width: 1280, height: 720, facingMode: { exact: "environment" } } };
 
 
 
