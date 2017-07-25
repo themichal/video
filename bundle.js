@@ -11066,8 +11066,8 @@ var App = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_react_icons_lib_md_photo_camera___default.a, { width: '60px', height: '60px', color: '#888' })
               )
             ),
-            support && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('canvas', { ref: 'canvas', style: { width: '100%', display: this.state.taken ? 'block' : 'none' } }),
-            !support && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('canvas', { ref: 'canvas', style: { width: '100%', display: this.state.taken ? 'block' : 'none' } }),
+            !support && !this.state.taken && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { style: { display: 'flex', flexDirection: 'column', alignItems: 'center' } },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_md_videocam_off___default.a, { width: '60px', height: '60px', color: '#888' }),

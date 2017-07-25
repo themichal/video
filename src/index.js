@@ -83,9 +83,8 @@ class App extends Component {
                   <Photo width='60px' height='60px' color='#888' />
                 </div> }
               </div> }
-            { support &&
-              <canvas ref='canvas' style={{ width: '100%', display: this.state.taken ? 'block' : 'none'}} /> }
-            { ! support &&
+            <canvas ref='canvas' style={{ width: '100%', display: this.state.taken ? 'block' : 'none'}} />
+            { ! support && !this.state.taken &&
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <CamOff width='60px' height='60px' color='#888' />
                 <p style={{ color: '#333'}}>We are sorry, Apple hardware is not supported :(</p>
