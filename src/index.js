@@ -74,6 +74,15 @@ class App extends Component {
           <input type='file' accept='image/*' capture='camera'
             onChange={(e) => this.handleChange(e)}
            />
+          <input type='file' accept='image/*' 
+            onChange={(e) => this.handleChange(e)}
+           />
+          <input type='file' capture='camera'
+            onChange={(e) => this.handleChange(e)}
+           />
+          <input type='file'
+            onChange={(e) => this.handleChange(e)}
+           />
         </div>
       </div>
     );

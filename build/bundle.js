@@ -10301,6 +10301,21 @@ var App = function (_Component) {
             onChange: function onChange(e) {
               return _this2.handleChange(e);
             }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file', accept: 'image/*',
+            onChange: function onChange(e) {
+              return _this2.handleChange(e);
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file', capture: 'camera',
+            onChange: function onChange(e) {
+              return _this2.handleChange(e);
+            }
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file',
+            onChange: function onChange(e) {
+              return _this2.handleChange(e);
+            }
           })
         )
       );
