@@ -8,9 +8,11 @@
     "classnames": "2.x.x",
     "history": "4.x.x",
     "i18next": "7.x.x",
+    "material-ui": "^0.18.0",
     "promise": "7.x.x",
     "react": "15.x.x",
     "react-dom": "15.x.x",
+    "react-icons": "2.x.x",
     "source-map-support": "0.4.x",
     "whatwg-fetch": "2.x.x"
   },
