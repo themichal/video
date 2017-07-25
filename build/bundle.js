@@ -10206,8 +10206,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+//const width = 1280;
+//const height = 720;
+var width = 640;
+var height = 360;
+
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { video: { width: 1280, height: 720 } };
+var constraints = { video: { width: width, height: height } };
 
 navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream) {
   var video = document.querySelector('video');
@@ -10232,14 +10237,12 @@ var App = function (_Component) {
     key: 'handleClick',
     value: function handleClick() {
       var canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 1280);
-      canvas.setAttribute('height', 720);
+      canvas.setAttribute('width', width);
+      canvas.setAttribute('height', height);
       var video = document.getElementById('video');
       document.body.innerHTML = '';
       document.body.appendChild(canvas);
       var context = canvas.getContext('2d');
-      var height = 720;
-      var width = 1280;
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
@@ -10256,13 +10259,11 @@ var App = function (_Component) {
       reader.onload = function (e) {
         var canvas = document.createElement('canvas');
         var img = document.createElement('img');
-        canvas.setAttribute('width', 1280);
-        canvas.setAttribute('height', 720);
+        canvas.setAttribute('width', width);
+        canvas.setAttribute('height', height);
         document.body.innerHTML = '';
         document.body.appendChild(canvas);
         var context = canvas.getContext('2d');
-        var height = 720;
-        var width = 1280;
         canvas.width = width;
         canvas.height = height;
         img.onload = function () {
@@ -10287,7 +10288,7 @@ var App = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('video', { ref: 'video', id: 'video' }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
-            { onClick: function onClick() {
+            { type: 'button', onClick: function onClick() {
                 return _this2.handleClick();
               } },
             'Capture'

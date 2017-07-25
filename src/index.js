@@ -2,8 +2,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+//const width = 1280;
+//const height = 720;
+const width = 640;
+const height = 360;
+
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { video: { width: 1280, height: 720 } }; 
+var constraints = { video: { width: width, height: height } }; 
 
 navigator.mediaDevices.getUserMedia(constraints)
   .then(function(mediaStream) {
@@ -19,14 +24,12 @@ class App extends Component {
 
   handleClick() {
     const canvas = document.createElement('canvas');
-    canvas.setAttribute('width', 1280);
-    canvas.setAttribute('height', 720);
+    canvas.setAttribute('width', width);
+    canvas.setAttribute('height', height);
     const video = document.getElementById('video');
     document.body.innerHTML = '';
     document.body.appendChild(canvas);
     var context = canvas.getContext('2d');
-    const height = 720;
-    const width = 1280;
     canvas.width = width;
     canvas.height = height;
     context.drawImage(video, 0, 0, width, height);
@@ -42,13 +45,11 @@ class App extends Component {
     reader.onload = function (e) {
       const canvas = document.createElement('canvas');
       const img = document.createElement('img');
-      canvas.setAttribute('width', 1280);
-      canvas.setAttribute('height', 720);
+    canvas.setAttribute('width', width);
+    canvas.setAttribute('height', height);
       document.body.innerHTML = '';
       document.body.appendChild(canvas);
       var context = canvas.getContext('2d');
-      const height = 720;
-      const width = 1280;
       canvas.width = width;
       canvas.height = height;
       img.onload = function() {
@@ -65,7 +66,7 @@ class App extends Component {
       <div style={{ height: '100vh', width: '100vw', display: 'flex' }}>
         <div id='parent' style={{ display: 'flex', flexGrow: '1', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
           <video ref='video' id='video' />
-          <button onClick={() => this.handleClick()}>
+          <button type="button" onClick={() => this.handleClick()}>
             Capture
           </button>
         </div>
